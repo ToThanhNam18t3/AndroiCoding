@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 else {
                     Boolean result = myDB.checkusernamePassword(user , pass);
                     if(result == true ) {
-                        Intent intent = new Intent(getApplicationContext() , ListViewActivity.class);
+                        Intent intent = new Intent(getApplicationContext() , AddUserActivity.class);
                         startActivity(intent);
                     }
                     else {

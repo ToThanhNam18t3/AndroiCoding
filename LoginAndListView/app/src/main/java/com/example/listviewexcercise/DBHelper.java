@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.database.sqlite.SQLiteStatement;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -19,6 +20,7 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase myDB) {
         myDB.execSQL("create table users(username Text primary key , password Text)");
+
     }
 
     @Override
@@ -61,4 +63,8 @@ public class DBHelper extends SQLiteOpenHelper {
              return false;
         }
     }
+
+
+
+
 }
